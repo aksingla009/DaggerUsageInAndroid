@@ -3,6 +3,7 @@ package com.component.dagger2demo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.component.dagger2demo.di.DaggerSmartPhoneComponent
+import com.component.dagger2demo.di.modules.MemoryCardModule
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -27,7 +28,11 @@ class MainActivity : AppCompatActivity() {
         )
         phone.makeCallWithRecording()*/
 
-        DaggerSmartPhoneComponent.create().inject(this)
+        DaggerSmartPhoneComponent
+            .builder()
+            .memoryCardModule(MemoryCardModule(1024))
+            .build()
+            .inject(this)
         phone.makeCallWithRecording()
 
 
