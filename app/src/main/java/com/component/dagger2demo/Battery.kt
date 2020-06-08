@@ -1,8 +1,18 @@
 package com.component.dagger2demo
 
-import android.util.Log
-import javax.inject.Inject
+interface Battery{
+    /*
+    To show case the usage of Dependency injection if any class has a dependency on an interface
+    Since the Interface can not be constructed
+    Create a new class and implement this interface
+    then Get instance of that battery implementation class using Module and Provides
 
+     */
+
+    fun getPower()
+
+}
+/*
 class Battery @Inject constructor() {
     private var TAG = MyUtils.COMMON_TAG
 
@@ -19,4 +29,4 @@ class Battery @Inject constructor() {
         Log.i(TAG, "Battery Power is Available")
     }
 
-}
+}*/
