@@ -3,10 +3,11 @@ package com.component.dagger2demo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.component.dagger2demo.di.DaggerSmartPhoneComponent
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var phone: SmartPhone
+    @Inject lateinit var phone: SmartPhone
     //We want Dagger to Construct an instance of smartphone and send it to the mainActivity
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         )
         phone.makeCallWithRecording()*/
 
-        phone = DaggerSmartPhoneComponent.create().getSmartPhone()
+        DaggerSmartPhoneComponent.create().inject(this)
         phone.makeCallWithRecording()
 
 

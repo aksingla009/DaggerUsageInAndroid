@@ -1,5 +1,6 @@
 package com.component.dagger2demo.di
 
+import com.component.dagger2demo.MainActivity
 import com.component.dagger2demo.SmartPhone
 import com.component.dagger2demo.di.modules.MemoryCardModule
 import com.component.dagger2demo.di.modules.NCBatteryModule
@@ -22,6 +23,9 @@ interface SmartPhoneComponent {
     But the return type of the method should be the type of dependency we want
      */
 
-    fun getSmartPhone() : SmartPhone
+   // fun getSmartPhone() : SmartPhone
+
+
+    fun inject (mainActivity: MainActivity)
 
 }
