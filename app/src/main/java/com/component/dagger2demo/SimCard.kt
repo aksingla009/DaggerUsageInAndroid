@@ -1,8 +1,9 @@
 package com.component.dagger2demo
 
 import android.util.Log
+import javax.inject.Inject
 
-class SimCard(private val serviceProvider: ServiceProvider) {
+class SimCard @Inject constructor(private val serviceProvider: ServiceProvider) {
     private var TAG = MyUtils.COMMON_TAG
 
     init {

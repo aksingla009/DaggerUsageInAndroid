@@ -10,7 +10,7 @@ class MyUtils {
 
         //String TAG will be defined in their own classes
         fun getTagType(): TagType {
-            return TagType.CLASS
+            return TagType.COMMON
         }
 
     }

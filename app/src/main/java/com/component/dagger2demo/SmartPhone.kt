@@ -2,8 +2,9 @@ package com.component.dagger2demo
 
 import android.content.Context
 import android.util.Log
+import javax.inject.Inject
 
-class SmartPhone(
+class SmartPhone @Inject constructor(
     private val battery: Battery,
     private val simCard: SimCard,
     private val memoryCard: MemoryCard

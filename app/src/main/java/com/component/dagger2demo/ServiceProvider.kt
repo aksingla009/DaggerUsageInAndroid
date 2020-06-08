@@ -1,8 +1,9 @@
 package com.component.dagger2demo
 
 import android.util.Log
+import javax.inject.Inject
 
-class ServiceProvider {
+class ServiceProvider @Inject constructor(){
     private var TAG = MyUtils.COMMON_TAG
 
     init {
