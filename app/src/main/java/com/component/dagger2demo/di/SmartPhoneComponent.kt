@@ -5,6 +5,7 @@ import com.component.dagger2demo.SmartPhone
 import com.component.dagger2demo.di.modules.MemoryCardModule
 import com.component.dagger2demo.di.modules.NCBatteryModule
 import dagger.Component
+import javax.inject.Singleton
 
 /*
 To use Dagger2 generated codes for dependency injection we also need an Interface annotated with @Component annotation
@@ -14,6 +15,7 @@ If you are using any modules for classes which you do not own then make sure you
 From where Component will fetch the dependency form their respective providers
 So link all the modules to this component
  */
+@Singleton
 @Component(modules = [MemoryCardModule::class,NCBatteryModule::class])
 interface SmartPhoneComponent {
 
