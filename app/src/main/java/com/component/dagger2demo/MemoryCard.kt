@@ -3,7 +3,10 @@ package com.component.dagger2demo
 import android.util.Log
 import javax.inject.Inject
 
-class MemoryCard @Inject constructor(){
+//Lets Assume we do not OWN Memory Card class so we can not modify MemoryCard Class
+//So we will Create a Memory Card Module which will provide required dependency by looking at return type of provider method
+//class MemoryCard @Inject constructor(){
+class MemoryCard {
     private var TAG = MyUtils.COMMON_TAG
 
     init {
